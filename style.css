@@ -1,0 +1,547 @@
+.icona {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* oppure 20px, 30px... 100 è forse troppo */
+    margin-bottom: 10px;
+}
+#iconaP {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* oppure 20px, 30px... 100 è forse troppo */
+    margin-bottom: 10px;
+}
+
+.titolo{
+    width: 100%;
+    border-bottom: 2px solid #315f8e;
+    text-shadow: 2px 2px 5px black;
+}
+h2{
+    margin-top: 1px;
+   text-shadow: 2px 2px 5px black;
+   
+   padding-top:50px;
+
+}
+.form-visible {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* 👈 centra il contenuto */
+  gap: 1rem;
+  z-index: 10;
+
+  width: 90%;
+  max-width: 400px;
+}
+
+
+.iconaBTN{
+    display: flex;
+    align-items: flex-end;
+    gap:10px;
+    width: 100%;
+    border-top: 2px solid #315f8e;
+}
+button{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+     transition: 0.3s;
+     border: none;
+     box-shadow: 2px 2px 2px black;
+}
+button:hover{
+    background-color: #2e6ba8;
+    cursor: pointer;
+    transform: scale(1.5);
+}
+ul{
+    list-style: none;
+}
+.task {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centra gli elementi figli */
+  gap: 1rem;
+  padding: 2rem;
+  width: 250px;
+  background-color: #87b4e1;
+  border-radius: 8px;
+  box-shadow: 3px 3px 1px rgba(0, 0, 0, 1);
+  text-align: center;
+}
+input,
+textarea {
+  width: 100%;
+  border-radius: 10px;
+  padding: 10px;
+  border: 0;
+  outline: 0;
+  box-sizing: border-box; /* evita che padding rovini la larghezza */
+  margin-bottom: 10px;
+  transition: 0.3s;
+  text-align: center;
+}
+input:focus{
+    border:3px solid #3e6e9f;
+}
+textarea:focus{
+    border:3px solid #3e6e9f;
+}
+label{
+    font-weight: bolder;
+}
+
+.card{
+    display: flex;
+    align-self: flex-start;
+    flex-direction: column;
+    width: 600px;
+     position: relative;
+}
+.unico{
+    display: flex;
+    gap:30px;
+    height: 20px;
+    
+    margin-top: 90px;
+    padding-bottom: 50px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+}
+#sezioneImportanti {
+  padding: 20px;
+
+  width: 1000px;
+  height: 500px;
+}
+#imp{
+    text-align: center;
+    margin-top: -80px;
+    font-size: 2rem;
+    color: whitesmoke
+}
+.listaImportanti{
+    border: 3px solid #3e6e9f;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding-left: 50px;
+    padding-top:50px;
+    font-weight: bolder;
+    background-color: #afc6dd;
+}
+.listaImportanti .day {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  background-color: #f8f8f8;
+}
+
+input[type="date"] {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-family: 'Inter', sans-serif;
+  background-color: #fff;
+  color: #333;
+  width: 100%;
+  max-width: 250px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+}
+
+input[type="date"]:focus {
+  border-color: #4a90e2;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.3);
+  background-color: #f0f8ff;
+  cursor: pointer;
+}
+
+.progetto{
+    padding: 10px;
+    width: auto;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bolder;
+    background-color: rgb(214, 99, 99);
+    transition: 0.3s;
+    margin-top: auto;  /* spinge il bottone in fondo */
+   position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+.placeholder{
+    margin-top: 10px;
+    margin-left: 10px;
+    color:rgba(0, 0, 0, .2);
+}
+.progetto:hover{
+    transform: scale(1.2);
+    background-color: rgb(174, 64, 64);
+}
+.importante{
+    padding: 10px;
+    width: auto;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bolder;
+    background-color: rgb(57, 148, 65);
+    transition: 0.3s;
+}
+.importante:hover{
+    transform: scale(1.2);
+    background-color:rgb(29, 95, 34);
+}
+.contenitoreTask{
+    border-radius: 10px;
+    padding: 5px;
+    height: 200px;
+    display: flex;
+    box-shadow: 3px 3px 2px black;
+    border: 0.1px solid black;
+}
+.titolotask{
+    text-shadow: 2px 2px 10px black;
+    color: whitesmoke;
+    padding-bottom: 10px;
+    margin-left: 20px;
+}
+.contenuto {
+
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: #fff;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 100vh;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+     font-family: 'Inter', sans-serif;
+}
+#sidebar{
+    justify-self: flex-start;
+     background-color: #6aa0d5;  /* blu scuro */
+  color: #ECF0F1;             /* testo chiaro */
+  width: 250px;
+  height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+}
+#sidebar h1, .sidebar li {
+  color: #ECF0F1;   
+  padding: 10px;          /* testo */
+}
+
+.icona.i{
+    padding: 10px;
+    border-radius: 10px;
+     transition: 0.3s;
+     font-weight: bolder;
+}
+.icona.i:hover{
+    background-color: #2e6ba8;
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+#calendar {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 10px;
+  padding: 2rem;
+  background-color: #ecf0f1;
+  border-radius: 10px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+  max-width: 800px;
+}
+.paragrafoImportante{
+    transition: 0.3s;
+    cursor: pointer;
+}
+.paragrafoImportante:hover{
+    color: rgb(85, 173, 85);
+    transform: scale(1.2) translateX(10px);
+
+}
+.day {
+  background-color: #ffffff;
+  border-left: 4px solid #315f8e;
+  padding: 1rem;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.day:hover{
+    transform: scale(1.2);
+}
+
+.day strong {
+  color: #315f8e;
+  font-size: 1.1rem;
+}
+
+.day span {
+  font-size: 0.95rem;
+  color: #333;
+}
+.titolocalendario{
+    text-shadow: 2px 2px 10px black;
+    color: whitesmoke
+}
+@keyframes stella-che-sale {
+  0% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100px) scale(1.5);
+  }
+}
+
+.stellina-animata {
+  position: fixed;
+  width: 30px;
+  left: 50%; /* centrata orizzontalmente */
+  top: 50%;  /* parte dal centro schermo */
+  transform: translate(-50%, -50%);
+  animation: stella-che-sale 1s ease-out forwards;
+  pointer-events: none; /* non interferisce con i click */
+  z-index: 9999;
+}
+@keyframes esciVersoSinistra {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}
+
+.esci {
+  animation: esciVersoSinistra 0.5s forwards;
+}
+@keyframes entraDaSinistra {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.entra {
+  animation: entraDaSinistra 0.5s ease forwards;
+}
+@keyframes esciVersoSinistra2 {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+    scale: 1;
+  }
+  100% {
+    transform: translateX(-1000px) translateY(-700px);
+    opacity: 0;
+    scale: 0;
+  }
+}
+
+
+.esci {
+  animation: esciVersoSinistra2 0.5s ease forwards;
+}
+/* Stato normale */
+#questasettimana {
+  transition: transform 0.5s ease;
+}
+
+/* Classe per ingrandire */
+.ingrandisci {
+  transform: scale(1.2); /* ingrandisci del 20% */
+}
+/* Stato iniziale nascosto e spostato a sinistra */
+@keyframes entraDaSinistra2 {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Classe per animare entrata */
+.entrata-sinistra {
+  animation: entraDaSinistra2 0.5s forwards ease-out;
+}
+@keyframes entraDaSinistraECresce {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%) scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+.entrata-cresci {
+  animation: entraDaSinistraECresce 0.6s forwards ease-out;
+  transform-origin: left center; /* punto di ancoraggio per la scala */
+}
+@keyframes entraDettagli {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes esciCalendario {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes entraCalendario {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.card.entrando {
+  animation: entraDettagli 0.5s forwards ease-out;
+}
+
+#calendar.uscendo {
+  animation: esciCalendario 0.5s forwards ease-in;
+}
+
+#calendar.entrando {
+  animation: entraCalendario 0.5s forwards ease-out;
+}
+.contenitore-orologio {
+  background-color: white; /* blu scuro */;
+  padding: 40px 60px;
+  border-radius: 20px;
+  box-shadow: 5px 5px 1px rgba(0,0,0, 0.4);
+  align-items: center;
+display: flex;
+}
+
+#orologio {
+  font-size: 4rem;
+  letter-spacing: 3px;
+  align-items: center;
+display: flex;
+color:#2e6ba8
+}
+.oggi{
+    display: flex;
+    flex-direction: column;
+    display: none; /* inizialmente nascosta */
+  animation: entraDaSinistra3 0.6s ease forwards;
+}
+.testooggi{
+     text-align: center;
+    margin-top: 30px;
+    font-size: 2rem;
+    color: whitesmoke;
+    text-shadow: 1px 1px 5px black;
+    margin-bottom: 30px;
+}
+/* ——— Animazione entrata da sinistra + fade-in ——— */
+@keyframes entraDaSinistra3 {
+  from {
+    transform: translateX(-100px);
+    opacity: 0;
+    scale: 0.9;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+    scale: 1;
+  }
+}
+.titolotask[contenteditable="true"],
+.placeholder[contenteditable="true"] {
+  outline: 2px dashed #315f8e;
+  background: #f0f8ff;
+}
+.card-footer {
+    margin-top: -48px;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: space-around;
+align-items: center;
+}
+#btnSalva {
+  padding: 20px 40px;
+  background: #315f8e;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#btnSalva:hover {
+  background: #2a4f7a;
+}
+
+

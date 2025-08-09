@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Todo App</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="./svg/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="./svg/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="./svg/favicon-16x16.png">
+<link rel="manifest" href="./svg/site.webmanifest">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="sidebar">
+    <div class="icona">
+      <img src="./svg/todolist-pen-svgrepo-com.svg" alt="" width="20">
+      <h1 class="titolo">Todo List</h1>
+    </div>
+    <div id="app">
+      <ul>
+        <li class="icona i" id="oggiSidebar">
+          <img src="./svg/7now-svgrepo-com.svg" alt="" width="20">
+          Oggi
+        </li>
+        <li class="icona i" id="questasettimana">
+          <img src="./svg/calendar-week-svgrepo-com.svg" alt="" width="20">
+          Questa Settimana
+        </li>
+        <li class="icona i" id="importanti">
+  <img src="./svg/important-dates-svgrepo-com.svg" alt="" width="20">
+  Importanti
+</li>
+      </ul>
+      <div class="iconaBTN">
+        <h2>Aggiungi</h2>
+        <button>
+          <img src="./svg/add-svgrepo-com.svg" alt="" width="20" id="aggiungi">
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="contenuto">
+   <div id="sezioneImportanti" style="display: none;">
+  <h2 id="imp">Task Importanti</h2>
+  <div class="listaImportanti">
+    <!-- Qui verranno aggiunti i <p> con i titoli -->
+  </div>
+</div>
+</div>
+    <!-- Form inizialmente nascosto -->
+    <form class="task" style="display: none;">
+      <label for="titolo">Titolo</label>
+      <input type="text" id="titolo">
+      <textarea id="descrizione" placeholder="Descrivi..." rows="4"></textarea>
+      <input type="date" id="data">
+      <button>
+        <img src="./svg/add-svgrepo-com.svg" alt="" width="20" id="aggiungiform">
+      </button>
+    </form>
+
+    <!-- Card di esempio (nascosta) -->
+    <div class="card" style="display: none;">
+      <h1 class="titolotask">Titolo</h1>
+      <div class="contenitoreTask">
+        <p class="placeholder">Descrizione</p>
+        <div class="unico">
+          <input type="date" id="datamessa">
+          <button class="importante">
+            Importante
+            <img src="./svg/important-dates-svgrepo-com.svg" alt="" width="20">
+          </button>
+        </div>
+      </div>
+       <div class="card-footer">
+        <button id="btnSalva">Salva modifiche</button>
+      <button class="progetto"  onclick="cancella()">
+        Cancella
+        <img src="./svg/bin-svgrepo-com.svg" alt="" width="20">
+      </button>
+       </div>
+    </div>
+
+    <!-- Calendario -->
+     
+    <div id="calendar" style="display: none;">
+        <div class="icona">
+            <h1 class="titolocalendario">Calendario</h1>
+            <img src="./svg/calendar-svgrepo-com.svg" alt="" width="40">
+        </div>
+      
+    </div>
+    <div class="oggi">
+  <p class="testooggi" id="messaggioOggi">Oggi Non Hai Eventi In programma</p>
+  <div class="contenitore-orologio">
+    <img src="./svg/clock-svgrepo-com.svg" alt="" width="100">
+    <div id="orologio">00:00:00</div>
+  </div>
+</div>
+
+  <script src="index.js"></script>
+</body>
+</html>
