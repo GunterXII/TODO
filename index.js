@@ -1,6 +1,4 @@
-// ——————————————
-// 1) Selettori unici
-// ——————————————
+
 const aggiungi       = document.getElementById("aggiungi");
 const form           = document.querySelector(".task");
 const aggiungiForm   = document.getElementById("aggiungiform");
@@ -13,15 +11,10 @@ const sezioneImportanti = document.getElementById("sezioneImportanti");    // il
 const listaImportanti  = document.querySelector(".listaImportanti");        // la lista interna
 
 
-// ——————————————
-// 2) Variabili di stato
-// ——————————————
 let giornoSelezionato = null; 
 const taskImportanti = []; 
 
-// ——————————————
-// 3) Funzioni di rendering
-// ——————————————
+
 function renderCalendario() {
   calendarione.style.display = "block";
   taskDettagliata.style.display = "none";
@@ -51,9 +44,7 @@ function renderForm() {
 
 aggiungi.addEventListener("click", renderForm);
 
-// ——————————————
-// 4) Prendere dati dal form
-// ——————————————
+
 function prendiInfo() {
   const titolo      = document.getElementById("titolo").value;
   const descrizione = document.getElementById("descrizione").value;
@@ -61,9 +52,7 @@ function prendiInfo() {
   return [titolo, descrizione, data];
 }
 
-// ——————————————
-// 5) Creare un nuovo giorno nel calendario
-// ——————————————
+
 function creaCalendario([titolo, descrizione, data] = prendiInfo()) {
   const giorno = document.createElement("div");
   giorno.classList.add("day");
@@ -335,5 +324,6 @@ btnSalva.addEventListener("click", () => {
     btnSalva.textContent = "Salva modifiche";
   }, 1500);
 });
+
 
 
